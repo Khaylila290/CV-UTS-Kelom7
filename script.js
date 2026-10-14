@@ -1,63 +1,77 @@
-const body = document.body;
-const themeToggle = document.querySelector(".theme-toggle");
-const themeIcon = document.querySelector(".theme-icon");
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
+document.addEventListener("DOMContentLoaded", function () {
 
-const savedTheme = localStorage.getItem("portfolio-theme");
+    // 1. SEARCH PROFILE
+    const searchInput = document.getElementById("searchInput");
+    const profileCards = document.querySelectorAll(".profile-card");
+    const noResults = document.getElementById("noResults");
 
-if (savedTheme === "dark") {
-  body.classList.add("dark");
-  if (themeIcon) themeIcon.textContent = "☀️";
-} else {
-  if (themeIcon) themeIcon.textContent = "🌙";
-}
+    if (searchInput) {
+        searchInput.addEventListener("input", function () {
+            const keyword = searchInput.value
+                .toLowerCase()
+                .trim();
 
-function setTheme(theme) {
-  if (theme === "dark") {
-    body.classList.add("dark");
-    if (themeIcon) themeIcon.textContent = "☀️";
-    localStorage.setItem("portfolio-theme", "dark");
-  } else {
-    body.classList.remove("dark");
-    if (themeIcon) themeIcon.textContent = "🌙";
-    localStorage.setItem("portfolio-theme", "light");
-  }
-}
+            let visibleCount = 0;
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const isDark = body.classList.contains("dark");
-    setTheme(isDark ? "light" : "dark");
-  });
-}
+            profileCards.forEach(function (card) {
+                const searchableText = card.textContent.toLowerCase();
+                const extraKeywords = (
+                    card.getAttribute("data-search") || ""
+                ).toLowerCase();
 
-if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    nav.classList.toggle("is-open");
-  });
-}
+                const isMatch =
+                    searchableText.includes(keyword) ||
+                    extraKeywords.includes(keyword);
 
-document.querySelectorAll(".nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    if (nav) nav.classList.remove("is-open");
-  });
-});
+                card.hidden = !isMatch;
 
-const revealElements = document.querySelectorAll(".reveal");
+                if (isMatch) {
+                    visibleCount++;
+                }
+            });
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
-      }
+            if (noResults) {
+                noResults.hidden = visibleCount !== 0;
+            }
+        });
+    }
+
+    // 2. DARK MODE
+    const themeToggle = document.getElementById("themeToggle");
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            const isDarkMode =
+                document.body.classList.contains("dark-mode");
+
+            themeToggle.textContent = isDarkMode
+                ? "☀ Tema"
+                : "☾ Tema";
+        });
+    }
+
+    // 3. SMOOTH SCROLL FOR INTERNAL LINKS
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const targetId = link.getAttribute("href");
+
+            if (!targetId || targetId === "#") return;
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+                history.replaceState(null, "", targetId);
+            }
+        });
     });
-  },
-  {
-    threshold: 0.15,
-  }
-);
 
-revealElements.forEach((element) => revealObserver.observe(element));
+});

@@ -1,373 +1,481 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV 3 Orang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peoplefolio - kumpulan profil dan CV mahasiswa">
+    <title>Peoplefolio | Student CV Journal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="page">
 
-    <!-- CV 1 - ALMIRA -->
-    <section class="cv cv-almira">
-      <div class="cv-inner">
-        <aside class="left-panel">
-          <div class="photo-wrap">
-            <img src="foto almira.jpeg" alt="Almira Sanari Salsabila" />
-          </div>
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="#home" class="logo">people<span>folio.</span></a>
 
-          <div class="bio-block">
-            <h3>BIODATA</h3>
-            <div class="bio-row">
-              <span class="label">Nama</span>
-              <span class="value">: Almira Sanari Salsabila</span>
-            </div>
-            <div class="bio-row">
-              <span class="label">TTL</span>
-              <span class="value">: Jakarta, 18 Februari 2007</span>
-            </div>
-            <div class="bio-row">
-              <span class="label">Alamat</span>
-              <span class="value">: Jl. KH. Naim 1 No.5, RT.05/RW.11, Cipete Utara, Kebayoran Baru, Jakarta Selatan</span>
-            </div>
-          </div>
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#directory">Profil</a>
+            <a href="#about">Tentang</a>
+        </nav>
 
-          <div class="card">
-            <h3>KONTAK</h3>
-            <ul>
-              <li><span class="icon">📞</span> 085795057554</li>
-              <li><span class="icon">✉</span> almirasalsaa@gmail.com</li>
-              <li><span class="icon">◎</span> @almirasalsaa</li>
-            </ul>
-          </div>
+        <button id="themeToggle" class="theme-button" type="button">
+            ☾ Tema
+        </button>
+    </div>
+</header>
 
-          <div class="card">
-            <h3>KEMAMPUAN &amp; KETERAMPILAN</h3>
-            <ul class="list-simple">
-              <li>Video editing</li>
-              <li>Menggambar/ilustrasi</li>
-              <li>Kerja sama tim</li>
-              <li>Komunikasi</li>
-              <li>Manajemen waktu</li>
-              <li>Mampu mengikuti arahan</li>
-              <li>Mau belajar dan berdaptasi</li>
-            </ul>
-          </div>
-        </aside>
-
-        <div class="right-panel">
-          <h1 class="main-title">ALMIRA SANARI<br>SALSABILA</h1>
-          <p class="subtitle">Mahasiswi aktif UIN Jakarta</p>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PROFIL</h2>
-            </div>
+<main>
+    <!-- HERO BLOG -->
+    <section class="hero container" id="home">
+        <div class="hero-copy">
+            <span class="eyebrow">STUDENT PROFILE JOURNAL · 2026</span>
+            <h1>Every person has a <em>story.</em></h1>
             <p>
-              Mahasiswa Program Studi Manajemen Pendidikan UIN Syarif Hidayatullah Jakarta
-              yang memiliki ketertarikan dalam kegiatan organisasi, kepanitiaan, dan
-              pengembangan diri. Memiliki sedikit pengalaman dalam kegiatan sekolah dan
-              masyarakat serta belajar tim, mau belajar, dan siap berkontribusi dalam
-              kegiatan kepanitiaan.
+                Ruang digital untuk mengenal perjalanan pendidikan,
+                pengalaman organisasi, prestasi, dan keterampilan
+                mahasiswa melalui cerita di balik CV mereka.
             </p>
-          </div>
 
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PENDIDIKAN</h2>
-            </div>
+            <a href="#directory" class="primary-button">
+                Jelajahi profil <span>↘</span>
+            </a>
 
-            <div class="table-row">
-              <div class="left-text">PAUD Dwiyanti Kemang</div>
-              <div class="right-text">2009 - 2011</div>
+            <div class="hero-meta">
+                <span>03 Profil Mahasiswa</span>
+                <span>·</span>
+                <span>Education & Experience</span>
             </div>
-            <div class="table-row">
-              <div class="left-text">TK TPA Nurul Falah</div>
-              <div class="right-text">2011 - 2013</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">SDS Islam AHDI</div>
-              <div class="right-text">2013 - 2019</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">MTSN 1 Jakarta</div>
-              <div class="right-text">2019 - 2022</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">MAN 4 Jakarta</div>
-              <div class="right-text">2022 - 2025</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">UIN Syarif Hidayatullah Jakarta</div>
-              <div class="right-text">2025 - Sekarang</div>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PENGALAMAN</h2>
-            </div>
-            <ul class="experience-list">
-              <li>Juara Harapan 1 lomba voly jenjang SD</li>
-              <li>Perwakilan cerdas cermat jenjang SD</li>
-              <li>Anggota pengajian TPQ Fattahillah</li>
-              <li>Anggota SBQ (Seni Baca al Qur'an) MTSN 1 Jakarta</li>
-              <li>Anggota eskul basket MTSN 1 Jakarta</li>
-              <li>Anggota ECC (English Conversation Club) MAN 4 Jakarta</li>
-              <li>Anggota Tim Riset kelas X MAN 4 Jakarta</li>
-              <li>Peraih medali Emas Olimpiade KHSPI bidang Bahasa Indonesia jenjang SMA</li>
-              <li>Panitia 17 Agustus RW. 11 Cipete Utara</li>
-            </ul>
-          </div>
         </div>
-      </div>
+
+        <div class="hero-art">
+            <div class="art-card art-back">
+                <span>EDUCATION</span>
+                <div class="art-line"></div>
+                <div class="art-line short"></div>
+                <div class="art-line"></div>
+            </div>
+
+            <div class="art-card art-front">
+                <span class="art-number">01 / 03</span>
+                <div class="art-circle">P.</div>
+                <h2>People<br>with purpose.</h2>
+                <p>Discover · Learn · Grow</p>
+            </div>
+
+            <span class="decor decor-one">✳</span>
+            <span class="decor decor-two">✳</span>
+        </div>
     </section>
 
-    <!-- CV 2 - KHAYLILA -->
-    <section class="cv cv-khaylila">
-      <div class="cv-inner">
-        <aside class="left-panel">
-          <div class="photo-wrap">
-            <img src="foto bg merah.jpeg" alt="Khaylila Arnesha Putri" />
-          </div>
-
-          <div class="profile-box">
-            <h3>PROFIL</h3>
-            <p>
-              Mahasiswa aktif Manajemen Pendidikan yang memiliki kemampuan komunikasi
-              yang baik dan dapat memahami keadaan serta kebutuhan orang lain, serta
-              memiliki pengalaman dalam organisasi dan pengabdian untuk masyarakat.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>KEMAMPUAN</h3>
-            <ul class="list-simple">
-              <li>Bahasa Indonesia (Fasih)</li>
-              <li>Bahasa Inggris (Menengah)</li>
-              <li>Microsoft Office</li>
-              <li>Canva</li>
-              <li>Teamwork</li>
-              <li>Komunikasi</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>BAHASA</h3>
-            <ul class="list-simple">
-              <li>Bahasa Indonesia (Fasih)</li>
-              <li>Bahasa Inggris (Menengah)</li>
-            </ul>
-          </div>
-        </aside>
-
-        <div class="right-panel">
-          <h1 class="main-title khaylila-title">KHAYLILA ARNESHA PUTRI</h1>
-          <p class="subtitle">MAHASISWA BARU</p>
-
-          <div class="contact-row">
-            <span>📞 0895365451284</span>
-            <span>✉ arnesha2905@gmail.com</span>
-            <span>📍 Bogor, Jawa Barat</span>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>RIWAYAT PENDIDIKAN</h2>
+    <!-- DIRECTORY -->
+    <section class="directory section container" id="directory">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">THE DIRECTORY</span>
+                <h2>Meet the people.</h2>
+                <p class="section-description">
+                    Tiga mahasiswa, tiga perjalanan, dan beragam pengalaman.
+                </p>
             </div>
 
-            <div class="school-block">
-              <strong>Universitas Islam Negeri Syarif Hidayatullah Jakarta</strong><br>
-              Jakarta, Indonesia<br>
-              2025 - Sekarang<br>
-              Program Studi Manajemen Pendidikan
+            <div class="search-wrap">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Cari nama atau jurusan..."
+                    aria-label="Cari profil mahasiswa"
+                >
             </div>
-
-            <div class="school-block">
-              <strong>MA Ummul Quro Al-Islami</strong><br>
-              Bogor, Indonesia<br>
-              Ilmu Pengetahuan Alam, 91/35 / 100,00<br>
-              2021 - 2025
-            </div>
-
-            <div class="school-block">
-              <strong>Arab Language Course Certification AnNajah</strong><br>
-              Pare<br>
-              Maret 2022
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PRESTASI</h2>
-            </div>
-            <ul class="experience-list">
-              <li>Sekretaris Terbaik Departemen Komunikasi, Informasi, dan Publikasi</li>
-              <li>HMPS Manajemen Pendidikan 2026, UIN Jakarta</li>
-              <li>28 Agustus 2026</li>
-            </ul>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PENGALAMAN ORGANISASI</h2>
-            </div>
-            <ul class="experience-list">
-              <li>Ikatan Santri Putri (ISPI)<br><span>Sekretaris Bagian Pengajaran dan Adab<br>2024 - 2025</span></li>
-              <li>Pergerakan Mahasiswa Islam Indonesia (PMII)<br><span>Anggota PMII Rayon Manajemen Pendidikan<br>2025 - Sekarang</span></li>
-              <li>Himpunan Mahasiswa Program Studi Manajemen Pendidikan<br><span>Sekretaris Departemen Komunikasi, Informasi, dan Publikasi<br>2026 - Sekarang</span></li>
-            </ul>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PENGALAMAN KEPANITIAAN</h2>
-            </div>
-            <ul class="experience-list">
-              <li>Pergantian Pengurus (PERGARUS) Pesantren Modern Ummul Quro Al-Islami<br><span>Wakil Ketua Bagian Keamanan<br>Desember 2023</span></li>
-              <li>Member Show (MS) Pesantren Modern Ummul Quro Al-Islami<br><span>Penanggung Jawab Panampilan Paskibra Varia Formasi<br>Desember 2023</span></li>
-              <li>Pekan Olahraga dan Seni (PORSENI) Pesantren Modern Ummul Quro Al-Islami<br><span>Koordinator Lapangan Bagian Putri<br>09 Juli 2024</span></li>
-              <li>Tablig Akbar Pesantren Modern Ummul Quro Al-Islami<br><span>28 Agustus 2026<br>09 Januari 2025</span></li>
-              <li>Mapaba Kharisma PMII Rayon Manajemen Pendidikan<br><span>Divisi Publikasi dan Dokumentasi<br>23 November 2025</span></li>
-              <li>Pelantikan Pengurus PMII Rayon Manajemen Pendidikan 2026<br><span>Divisi Konsumsi<br>11 April 2026</span></li>
-              <li>Pengenalan Budaya Akademik dan Kemaslahatan Manajemen Pendidikan 2026 (PKA) MPK<br><span>Koordinator Divisi Publikasi dan Dokumentasi<br>20 Agustus 2026</span></li>
-            </ul>
-          </div>
         </div>
-      </div>
+
+        <div class="profile-grid" id="profileGrid">
+
+            <!-- CARD 1 -->
+            <article class="profile-card" data-search="khaylila arnesha putri manajemen pendidikan bogor publikasi dokumentasi">
+                <div class="card-cover cover-green">
+                    <span class="profile-number">PROFILE — 01</span>
+                    <span class="cover-symbol">K.</span>
+                    <span class="cover-caption">THE ORGANIZER</span>
+                </div>
+
+                <div class="card-body">
+                    <span class="category">EDUCATION & ORGANIZATION</span>
+                    <h3>Khaylila Arnesha Putri</h3>
+                    <p class="card-subtitle">Manajemen Pendidikan</p>
+                    <p class="card-description">
+                        Tertarik pada komunikasi, publikasi, dokumentasi,
+                        dan pengelolaan kegiatan organisasi.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>Publikasi</span>
+                        <span>Administrasi</span>
+                        <span>Teamwork</span>
+                    </div>
+
+                    <a href="#cv-khaylila" class="text-link">
+                        Lihat CV <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="profile-card" data-search="saskia kayla ramadhani manajemen pendidikan bogor volunteer osn pmr">
+                <div class="card-cover cover-sand">
+                    <span class="profile-number">PROFILE — 02</span>
+                    <span class="cover-symbol">S.</span>
+                    <span class="cover-caption">THE VOLUNTEER</span>
+                </div>
+
+                <div class="card-body">
+                    <span class="category">VOLUNTEERING & LEARNING</span>
+                    <h3>Saskia Kayla Ramadhani</h3>
+                    <p class="card-subtitle">Manajemen Pendidikan</p>
+                    <p class="card-description">
+                        Memiliki pengalaman dalam kegiatan sukarela,
+                        ekstrakurikuler, kerja tim, dan kegiatan sekolah.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>Volunteer</span>
+                        <span>PMR</span>
+                        <span>Problem Solving</span>
+                    </div>
+
+                    <a href="#cv-saskia" class="text-link">
+                        Lihat CV <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="profile-card" data-search="almira sanari salsabila manajemen pendidikan jakarta video editing ilustrasi organisasi">
+                <div class="card-cover cover-charcoal">
+                    <span class="profile-number">PROFILE — 03</span>
+                    <span class="cover-symbol">A.</span>
+                    <span class="cover-caption">THE CREATIVE</span>
+                </div>
+
+                <div class="card-body">
+                    <span class="category">CREATIVITY & LEADERSHIP</span>
+                    <h3>Almira Sanari Salsabila</h3>
+                    <p class="card-subtitle">Mahasiswa UIN Jakarta</p>
+                    <p class="card-description">
+                        Tertarik pada kegiatan organisasi, kepanitiaan,
+                        ilustrasi, video editing, dan pengembangan diri.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>Creative</span>
+                        <span>Video Editing</span>
+                        <span>Communication</span>
+                    </div>
+
+                    <a href="#cv-almira" class="text-link">
+                        Lihat CV <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="noResults" class="no-results" hidden>
+            Profil tidak ditemukan. Coba kata kunci lain.
+        </p>
     </section>
 
-    <!-- CV 3 - SASKIA -->
-    <section class="cv cv-saskia">
-      <div class="cv-inner">
-        <aside class="left-panel">
-          <div class="photo-wrap">
-            <img src="foto saskia.jpeg" alt="Saskia Kayla Ramadhani" />
-          </div>
-
-          <div class="card">
-            <h3>PROFIL</h3>
-            <p class="small-text">
-              Mahasiswa Manajemen Pendidikan di UIN Syarif Hidayatullah Jakarta,
-              cukup terbiasa terlibat di organisasi dan kegiatan volunteer, sehingga
-              sudah terbiasa kerja dalam tim dan pegang tanggung jawab kecil-kecilan
-              di berbagai kegiatan.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Keterampilan</h3>
-            <ul class="list-simple">
-              <li>Basic Microsoft Office</li>
-              <li>Menulis laporan &amp; essay</li>
-              <li>Basic Editor (Canva, Capcut)</li>
-              <li>Manajemen waktu</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>BAHASA</h3>
-            <ul class="list-simple">
-              <li>Bahasa Indonesia (Fasih)</li>
-              <li>Bahasa Inggris (Menengah)</li>
-            </ul>
-          </div>
-        </aside>
-
-        <div class="right-panel">
-          <h1 class="main-title saskia-title">SASKIA KAYLA RAMADHANI</h1>
-
-          <div class="contact-row">
-            <span>📞 +62 87823362404</span>
-            <span>✉ saskiaakayla27@gmail.com</span>
-            <span>📍 Gunung Putri, Bogor</span>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PROFIL</h2>
-            </div>
-            <p>
-              Mahasiswa Manajemen Pendidikan di UIN Syarif Hidayatullah Jakarta, cukup
-              terbiasa terlibat di organisasi dan kegiatan volunteer, sehingga sudah
-              terbiasa kerja dalam tim dan pegang tanggung jawab kecil-kecilan di
-              berbagai kegiatan.
-            </p>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PENGALAMAN</h2>
-            </div>
-            <ul class="experience-list">
-              <li>Peserta OSN IPA Tingkat Kabupaten Bogor</li>
-              <li>Anggota aktif tilawati</li>
-              <li>Anggota Aktif ekstrakurikuler PMR</li>
-              <li>Mentor pada kepanitiaan pelatihan gabungan ekstrakurikuler PMR</li>
-              <li>Volunteer kepanitiaan pada kegiatan Sanlat</li>
-              <li>Volunteer green generation beraksi</li>
-              <li>Volunteer Administrasi Sekolah</li>
-              <li>Project Pembuatan Rok Span &amp; celemek</li>
-            </ul>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>PENDIDIKAN</h2>
-            </div>
-
-            <div class="table-row">
-              <div class="left-text">RA Annisa</div>
-              <div class="right-text">2011 - 2013</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">MI AL - MUTTAQIN</div>
-              <div class="right-text">2013 - 2019</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">SMPIT ASSALAAM Karanggan</div>
-              <div class="right-text">2019 - 2022</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">MAN 1 Kab. Bogor</div>
-              <div class="right-text">2022 - 2025</div>
-            </div>
-            <div class="table-row">
-              <div class="left-text">UIN Syarif Hidayatullah Jakarta</div>
-              <div class="right-text">2025 - Sekarang</div>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="section-title-wrap">
-              <span class="diamond"></span>
-              <h2>KETERAMPILAN</h2>
-            </div>
-            <ul class="skill-two-col">
-              <li>Basic Microsoft Office</li>
-              <li>Menulis laporan &amp; essay</li>
-              <li>Basic Editor (Canva, Capcut)</li>
-              <li>Teamwork</li>
-              <li>Problem solving</li>
-              <li>Manajemen Waktu</li>
-            </ul>
-          </div>
+    <!-- CV 1 -->
+    <section class="cv-section container" id="cv-khaylila">
+        <div class="cv-heading">
+            <span class="eyebrow">PROFILE 01 · FULL STORY</span>
+            <h2>Khaylila Arnesha Putri</h2>
+            <p>Mahasiswa Manajemen Pendidikan · UIN Jakarta</p>
         </div>
-      </div>
+
+        <div class="cv-layout">
+            <aside class="cv-sidebar">
+                <div class="initial-avatar green-avatar">K.</div>
+                <h3>About me</h3>
+                <p>
+                    Mahasiswa aktif yang memiliki minat dalam komunikasi,
+                    publikasi, dokumentasi, dan manajemen kegiatan.
+                </p>
+
+                <h3>Skills</h3>
+                <ul class="clean-list">
+                    <li>Microsoft Office</li>
+                    <li>Google Drive</li>
+                    <li>Canva dan CapCut</li>
+                    <li>Dokumentasi</li>
+                    <li>Manajemen data</li>
+                    <li>Komunikasi dan teamwork</li>
+                </ul>
+
+                <h3>Languages</h3>
+                <p>Bahasa Indonesia — Fasih</p>
+                <p>Bahasa Inggris — Menengah</p>
+            </aside>
+
+            <div class="cv-main">
+                <div class="cv-block">
+                    <h3>01. Pendidikan</h3>
+                    <div class="timeline-item">
+                        <span>2025 — Sekarang</span>
+                        <h4>UIN Syarif Hidayatullah Jakarta</h4>
+                        <p>Program Studi Manajemen Pendidikan</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2021 — 2025</span>
+                        <h4>MA Ummul Quro Al-Islami</h4>
+                        <p>Ilmu Pengetahuan Alam</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>Maret 2022</span>
+                        <h4>Arabic Language Course Certification An-Najah</h4>
+                        <p>Pelatihan bahasa Arab, Pare</p>
+                    </div>
+                </div>
+
+                <div class="cv-block">
+                    <h3>02. Pengalaman Organisasi</h3>
+                    <div class="timeline-item">
+                        <span>2024 — 2025</span>
+                        <h4>Ikatan Santri Putri (ISPI)</h4>
+                        <p>Sekretaris Bagian Pengajaran dan Adab</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2025 — Sekarang</span>
+                        <h4>PMII Rayon Manajemen Pendidikan</h4>
+                        <p>Anggota organisasi</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2026 — Sekarang</span>
+                        <h4>HMPS Manajemen Pendidikan</h4>
+                        <p>Sekretaris Departemen Komunikasi, Informasi, dan Publikasi</p>
+                    </div>
+                </div>
+
+                <div class="cv-block">
+                    <h3>03. Prestasi & Kepanitiaan</h3>
+                    <ul class="detail-list">
+                        <li>Sekretaris Terbaik Departemen Komunikasi, Informasi, dan Publikasi.</li>
+                        <li>Koordinator Divisi Publikasi dan Dokumentasi PBAK Manajemen Pendidikan 2026.</li>
+                        <li>Pengalaman kepanitiaan dan kegiatan organisasi pesantren maupun kampus.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a class="back-link" href="#directory">↑ Kembali ke direktori</a>
     </section>
 
-  </main>
+    <!-- CV 2 -->
+    <section class="cv-section container" id="cv-saskia">
+        <div class="cv-heading">
+            <span class="eyebrow">PROFILE 02 · FULL STORY</span>
+            <h2>Saskia Kayla Ramadhani</h2>
+            <p>Mahasiswa Manajemen Pendidikan · UIN Jakarta</p>
+        </div>
+
+        <div class="cv-layout">
+            <aside class="cv-sidebar">
+                <div class="initial-avatar sand-avatar">S.</div>
+                <h3>About me</h3>
+                <p>
+                    Mahasiswa yang terbiasa terlibat dalam organisasi dan
+                    kegiatan volunteer, bekerja dalam tim, serta menjalankan
+                    tanggung jawab dalam berbagai kegiatan.
+                </p>
+
+                <h3>Skills</h3>
+                <ul class="clean-list">
+                    <li>Microsoft Office dasar</li>
+                    <li>Menulis laporan dan esai</li>
+                    <li>Canva dan CapCut</li>
+                    <li>Adobe Animator dasar</li>
+                    <li>Problem solving</li>
+                    <li>Manajemen waktu</li>
+                    <li>Kerja sama tim</li>
+                </ul>
+            </aside>
+
+            <div class="cv-main">
+                <div class="cv-block">
+                    <h3>01. Pendidikan</h3>
+                    <div class="timeline-item">
+                        <span>2025 — Sekarang</span>
+                        <h4>UIN Syarif Hidayatullah Jakarta</h4>
+                        <p>Program Studi Manajemen Pendidikan</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2022 — 2025</span>
+                        <h4>MAN 1 Kabupaten Bogor</h4>
+                        <p>IPA Keterampilan Tata Busana</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2019 — 2022</span>
+                        <h4>SMPIT Assalaam Karanggan</h4>
+                        <p>Pendidikan menengah pertama</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2013 — 2019</span>
+                        <h4>MI Al-Muttaqin</h4>
+                        <p>Pendidikan dasar</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2011 — 2013</span>
+                        <h4>RA Annisa</h4>
+                        <p>Pendidikan anak usia dini</p>
+                    </div>
+                </div>
+
+                <div class="cv-block">
+                    <h3>02. Pengalaman</h3>
+                    <ul class="detail-list">
+                        <li>Peserta OSN IPA tingkat Kabupaten Bogor.</li>
+                        <li>Anggota aktif tilawati.</li>
+                        <li>Anggota aktif ekstrakurikuler PMR.</li>
+                        <li>Mentor pada kepanitiaan pelatihan gabungan ekstrakurikuler PMR.</li>
+                        <li>Volunteer kepanitiaan kegiatan Sanlat.</li>
+                        <li>Volunteer Green Generation Beraksi.</li>
+                        <li>Volunteer Administrasi Sekolah.</li>
+                        <li>Terlibat dalam proyek pembuatan rok span dan celemek.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-block">
+                    <h3>03. Keterampilan</h3>
+                    <div class="skill-tags">
+                        <span>Microsoft Office</span>
+                        <span>Writing</span>
+                        <span>Basic Editing</span>
+                        <span>Teamwork</span>
+                        <span>Problem Solving</span>
+                        <span>Time Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="back-link" href="#directory">↑ Kembali ke direktori</a>
+    </section>
+
+    <!-- CV 3 -->
+    <section class="cv-section container" id="cv-almira">
+        <div class="cv-heading">
+            <span class="eyebrow">PROFILE 03 · FULL STORY</span>
+            <h2>Almira Sanari Salsabila</h2>
+            <p>Mahasiswa Manajemen Pendidikan · UIN Jakarta</p>
+        </div>
+
+        <div class="cv-layout">
+            <aside class="cv-sidebar dark-sidebar">
+                <div class="initial-avatar charcoal-avatar">A.</div>
+                <h3>About me</h3>
+                <p>
+                    Mahasiswa yang memiliki ketertarikan dalam organisasi,
+                    kepanitiaan, dan pengembangan diri. Terbiasa bekerja
+                    sama dalam tim, bertanggung jawab, dan siap belajar.
+                </p>
+
+                <h3>Skills</h3>
+                <ul class="clean-list">
+                    <li>Video editing</li>
+                    <li>Menggambar dan ilustrasi</li>
+                    <li>Kerja sama tim</li>
+                    <li>Komunikasi</li>
+                    <li>Manajemen waktu</li>
+                    <li>Mengikuti arahan</li>
+                    <li>Adaptasi dan kemauan belajar</li>
+                </ul>
+            </aside>
+
+            <div class="cv-main">
+                <div class="cv-block">
+                    <h3>01. Pendidikan</h3>
+                    <div class="timeline-item">
+                        <span>2025 — Sekarang</span>
+                        <h4>UIN Syarif Hidayatullah Jakarta</h4>
+                        <p>Program Studi Manajemen Pendidikan</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2022 — 2025</span>
+                        <h4>MAN 4 Jakarta</h4>
+                        <p>Pendidikan menengah atas</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2019 — 2022</span>
+                        <h4>MTSN 1 Jakarta</h4>
+                        <p>Pendidikan menengah pertama</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2013 — 2019</span>
+                        <h4>SDS Islam AHDI</h4>
+                        <p>Pendidikan dasar</p>
+                    </div>
+                </div>
+
+                <div class="cv-block">
+                    <h3>02. Pengalaman & Aktivitas</h3>
+                    <ul class="detail-list">
+                        <li>Anggota pengajian TPQ Fattahillah.</li>
+                        <li>Anggota SBQ (Seni Baca Al-Qur'an) MTSN 1 Jakarta.</li>
+                        <li>Anggota ekstrakurikuler basket MTSN 1 Jakarta.</li>
+                        <li>Anggota English Conversation Club MAN 4 Jakarta.</li>
+                        <li>Anggota tim riset kelas X MAN 4 Jakarta.</li>
+                        <li>Peraih medali emas Olimpiade KHSPI bidang Bahasa Indonesia jenjang SMA.</li>
+                        <li>Panitia 17 Agustus RW 11 Cipete Utara.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-block">
+                    <h3>03. Keterampilan</h3>
+                    <div class="skill-tags">
+                        <span>Video Editing</span>
+                        <span>Ilustrasi</span>
+                        <span>Komunikasi</span>
+                        <span>Teamwork</span>
+                        <span>Manajemen Waktu</span>
+                        <span>Adaptasi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="back-link" href="#directory">↑ Kembali ke direktori</a>
+    </section>
+
+    <!-- ABOUT BLOG -->
+    <section class="about-section" id="about">
+        <div class="container about-inner">
+            <span class="eyebrow">ABOUT PEOPLEFOLIO</span>
+            <h2>More than a list<br>of experiences.</h2>
+            <p>
+                Peoplefolio adalah blog profil mahasiswa yang menyajikan
+                perjalanan pendidikan, keterampilan, dan pengalaman
+                sebagai gambaran proses belajar dan berkembang.
+            </p>
+            <a href="#home" class="primary-button light-button">
+                Kembali ke atas ↑
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <a href="#home" class="logo footer-logo">people<span>folio.</span></a>
+        <p>Student CV Journal · 2026</p>
+        <p>Made for learning and sharing.</p>
+    </div>
+</footer>
+
 </body>
 </html>

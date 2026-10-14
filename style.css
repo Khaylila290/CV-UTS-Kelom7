@@ -386,6 +386,43 @@ nav a:hover {
     opacity: .82;
 }
 
+/* FOTO COVER CARD (BARU) */
+.cover-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.profile-number,
+.cover-caption {
+    position: relative;
+    z-index: 1;
+}
+
+/* Biar teks tetap terbaca di atas foto */
+.card-cover:has(.cover-photo) .profile-number,
+.card-cover:has(.cover-photo) .cover-caption {
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.card-cover:has(.cover-photo)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .35),
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, .45)
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
 .cover-caption {
     align-self: flex-start;
     border-top: 1px solid currentColor;
@@ -516,6 +553,16 @@ nav a:hover {
 .charcoal-avatar {
     background: #525650;
     color: white;
+}
+
+/* FOTO AVATAR SIDEBAR CV (BARU) */
+.cv-photo {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 25px;
 }
 
 .cv-sidebar h3 {

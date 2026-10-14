@@ -1,0 +1,97 @@
+/* styles.css — fixed: strong colors + forced small photo + supports cv-almira & cv--almira */
+*{box-sizing:border-box}
+:root{
+  --muted:#666;
+  --bg:#f6f6f8;
+  --almira-dark:#16597f;
+  --almira-light:#cfeefb;
+  --khaylila-dark:#7b2cbf;
+  --khaylila-pink:#ff6fb5;
+  --saskia-dark:#8b5e3c;
+  --saskia-cream:#f7efe6;
+}
+
+/* Base */
+html,body{height:100%;margin:0;font-family:"Poppins",system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:#111}
+.container{width:min(96%,1100px);margin:28px auto;padding:0}
+
+/* Header */
+.site-header{padding:18px 0;border-bottom:1px solid rgba(0,0,0,0.06)}
+.site-header .brand{font-weight:700;display:inline-block}
+.nav{float:right}
+.nav a{margin-left:14px;text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:8px}
+
+/* CV wrapper */
+.cv{border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.06);background:#fff;margin-bottom:28px}
+.cv-inner{display:flex;align-items:stretch;min-height:520px}
+
+/* Left panel (colored) */
+.left-panel{
+  width:300px;min-width:240px;padding:20px;display:flex;flex-direction:column;gap:12px;color:#fff;
+  /* fallback if not themed */
+  background:linear-gradient(180deg,#333,#222);
+}
+
+/* Right panel (content) */
+.right-panel{flex:1;padding:28px 34px;background:linear-gradient(180deg,#fff,#fbfbfc)}
+
+/* Photo — FORCE small size (important to override other rules) */
+.photo-wrap{display:flex;justify-content:center;align-items:center;padding:8px}
+.photo{
+  width:90px !important;
+  height:90px !important;
+  max-width:90px !important;
+  max-height:90px !important;
+  object-fit:cover !important;
+  border-radius:14px !important;
+  border:4px solid rgba(255,255,255,0.14) !important;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12) !important;
+}
+
+/* Left cards text */
+.card, .bio-block, .profile-box{background:rgba(255,255,255,0.06);padding:12px;border-radius:10px}
+.card h3, .bio-block h3, .profile-box h3{margin:0 0 8px;font-size:14px;text-transform:uppercase}
+.card ul, .list-simple{margin:0;padding-left:18px}
+.card li, .list-simple li{margin:6px 0;color:rgba(255,255,255,0.96);font-size:13px}
+
+/* Main titles & sections */
+.main-title{margin:0;font-weight:800;line-height:0.95;font-size:clamp(1.6rem,3vw,2.6rem)}
+.subtitle{margin:8px 0 18px;color:#333;font-weight:600}
+.section{border-top:1px solid rgba(0,0,0,0.06);padding-top:16px;margin-top:16px}
+.section-title-wrap{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.diamond{width:10px;height:10px;transform:rotate(45deg);display:inline-block;background:currentColor}
+.section-title-wrap h2{margin:0;font-size:1.1rem;text-transform:uppercase;color:var(--muted)}
+
+/* Lists & tables */
+.table-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin:6px 0}
+.left-text{flex:1;font-weight:600}
+.right-text{min-width:120px;text-align:right;color:var(--muted)}
+.experience-list{margin:0;padding-left:20px}
+.experience-list li{margin:8px 0;line-height:1.6;color:#222}
+
+/* Skill grids */
+.skill-two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;list-style:disc;padding-left:20px;margin:0}
+
+/* Responsive */
+@media (max-width:980px){.cv-inner{flex-direction:column}.left-panel{width:100%;min-width:100%}.right-panel{padding:18px}}
+@media (max-width:560px){.photo{width:80px !important;height:80px !important}.main-title{font-size:1.6rem}.skill-two-col{grid-template-columns:1fr}}
+
+/* ---------------------
+   THEME: ALMIRA (both selectors)
+   support .cv-almira and .cv--almira names
+   --------------------- */
+.cv-almira .left-panel, .cv--almira .left-panel{
+  background:linear-gradient(180deg,var(--almira-dark),#0c3e57);
+  color:#fff;
+}
+.cv-almira .right-panel, .cv--almira .right-panel{
+  background:#ffffff;
+}
+.cv-almira .section-title-wrap, .cv--almira .section-title-wrap{color:var(--almira-dark)}
+.cv-almira .diamond, .cv--almira .diamond{background:var(--almira-dark)}
+
+/* ---------------------
+   THEME: KHAYLILA
+   --------------------- */
+.cv-khaylila .left-panel,*
+
